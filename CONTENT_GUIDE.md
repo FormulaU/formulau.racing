@@ -30,7 +30,7 @@ This GitHub Pages site is fully static. Content is rendered from `js/site-conten
 ## Notes
 
 - No GitHub API calls are used in production rendering.
-- A GitHub Action updates `js/site-content.js` after the GitHub Pages deployment workflow completes.
+- A GitHub Action updates `js/site-content.js` on pushes to `master` when sponsor/media/video assets change.
 - GitHub Pages serves directly from the `master` branch.
 - For local testing before pushing, run: `node scripts/generate-site-content.js`.
 - After pushing changes to `master`, GitHub Pages updates the live site.

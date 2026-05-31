@@ -1,11 +1,14 @@
 name: Sync Site Content
 
 on:
-  workflow_run:
-    workflows:
-      - pages build and deployment
-    types:
-      - completed
+  push:
+    branches:
+      - master
+    paths:
+      - 'img/sponsorship_logos/**'
+      - 'img/media_gallery/**'
+      - 'vid/**'
+      - 'scripts/generate-site-content.js'
   workflow_dispatch:
 
 permissions:
@@ -13,7 +16,6 @@ permissions:
 
 jobs:
   sync-manifest:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
