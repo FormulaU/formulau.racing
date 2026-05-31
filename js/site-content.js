@@ -23,7 +23,7 @@ window.FORMULAU_CONTENT = {
   ],
   "sponsorCurrent": [
     "0title/slcc.edu.png",
-    "2prime/savology.png"
+    "2prime/savology.com.png"
   ],
   "media": [
     "car_cabinet_view.jpg",
