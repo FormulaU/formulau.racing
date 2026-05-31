@@ -5,14 +5,15 @@ This GitHub Pages site is fully static. Content is rendered from `js/site-conten
 ## Add Or Update Sponsors
 
 1. Open `img/sponsorship_logos`.
-2. Pick the tier folder:
-   - `0platinum`
-   - `1gold`
-   - `2silver`
-   - `3bronze`
-   - `4supporter`
-3. Upload a logo image into that folder (`.png`, `.jpg`, `.jpeg`, `.webp`, or `.svg`).
-4. (Optional) Name the file as the sponsor domain (example: `mycompany.com.png`) so the logo links to `https://mycompany.com` automatically.
+2. For active sponsors, upload logos to tier folders:
+   - `0title`
+   - `1main`
+   - `2prime`
+   - `3spark`
+   - `4collaboration`
+3. For older logos, move them to `img/sponsorship_logos/archive` for internal storage only (not shown on the website).
+4. Use image formats `.png`, `.jpg`, `.jpeg`, `.webp`, or `.svg`.
+5. (Optional) Name the file as the sponsor domain (example: `mycompany.com.png`) so the logo links to `https://mycompany.com` automatically.
 
 ## Add Or Update Photos
 

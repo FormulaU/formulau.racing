@@ -1,49 +1,29 @@
 window.FORMULAU_CONTENT = {
   "sponsorTiers": [
     {
-      "folder": "0platinum",
-      "label": "Platinum"
+      "folder": "0title",
+      "label": "Title"
     },
     {
-      "folder": "1gold",
-      "label": "Gold"
+      "folder": "1main",
+      "label": "Main"
     },
     {
-      "folder": "2silver",
-      "label": "Silver"
+      "folder": "2prime",
+      "label": "Prime"
     },
     {
-      "folder": "3bronze",
-      "label": "Bronze"
+      "folder": "3spark",
+      "label": "Spark"
     },
     {
-      "folder": "4supporter",
-      "label": "Supporter"
+      "folder": "4collaboration",
+      "label": "Collaboration"
     }
   ],
-  "sponsors": [
-    "0platinum/davistech.edu.jpg",
-    "0platinum/slcc.edu.png",
-    "0platinum/williams-int.com.png",
-    "1gold/autoliv.com.png",
-    "1gold/colemanpowersportsusa.com.png",
-    "1gold/industritech.com.png",
-    "1gold/l3t.com.png",
-    "1gold/rebling.com.png",
-    "1gold/tmcnet.com.png",
-    "2silver/americanmuscle.com.png",
-    "2silver/huntsman.com.jpg",
-    "2silver/napaonline.com.png",
-    "2silver/savology.png",
-    "2silver/tmi-slc.com.png",
-    "3bronze/ansys.com.jpg",
-    "3bronze/k1speed.com.png",
-    "3bronze/trutechlaser.com.jpg",
-    "4supporter/freemansupply.com.jpg",
-    "4supporter/hoosiertire.com.jpg",
-    "4supporter/igus.com.png",
-    "4supporter/lacotech.com.jpeg",
-    "4supporter/superiorpaintsupply.com.png"
+  "sponsorCurrent": [
+    "0title/slcc.edu.png",
+    "2prime/savology.png"
   ],
   "media": [
     "car_cabinet_view.jpg",

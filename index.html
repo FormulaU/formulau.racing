@@ -157,6 +157,25 @@
 			</div>
 		</footer>
 
+		<div class="modal fade" id="mediaLightbox" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+				<div class="modal-content lightbox-content">
+					<button type="button" class="close lightbox-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<div class="modal-body lightbox-body">
+						<button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+							<i class="fa fa-angle-left"></i>
+						</button>
+						<img id="lightboxImage" src="" alt="" />
+						<button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+							<i class="fa fa-angle-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<script src="js/jquery.js"></script>
 		<script src="js/popper.js"></script>
 		<script src="js/bootstrap.js"></script>

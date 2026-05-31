@@ -5,11 +5,11 @@ const repoRoot = path.resolve(__dirname, '..');
 const outputPath = path.join(repoRoot, 'js', 'site-content.js');
 
 const tiers = [
-  { folder: '0platinum', label: 'Platinum' },
-  { folder: '1gold', label: 'Gold' },
-  { folder: '2silver', label: 'Silver' },
-  { folder: '3bronze', label: 'Bronze' },
-  { folder: '4supporter', label: 'Supporter' }
+  { folder: '0title', label: 'Title' },
+  { folder: '1main', label: 'Main' },
+  { folder: '2prime', label: 'Prime' },
+  { folder: '3spark', label: 'Spark' },
+  { folder: '4collaboration', label: 'Collaboration' }
 ];
 
 const sponsorExtensions = new Set(['.png', '.jpg', '.jpeg', '.webp', '.svg']);
@@ -29,7 +29,7 @@ function listFiles(dirPath, allowedExts) {
     .sort((a, b) => a.localeCompare(b));
 }
 
-function collectSponsors() {
+function collectCurrentSponsors() {
   const sponsorRoot = path.join(repoRoot, 'img', 'sponsorship_logos');
 
   return tiers.flatMap((tier) => {
@@ -52,7 +52,7 @@ function collectVideos() {
 function generateContentModule() {
   const payload = {
     sponsorTiers: tiers,
-    sponsors: collectSponsors(),
+    sponsorCurrent: collectCurrentSponsors(),
     media: collectMedia(),
     videos: collectVideos()
   };
