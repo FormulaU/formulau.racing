@@ -131,6 +131,35 @@ a:hover {
   color: var(--white);
 }
 
+.theme-picker-item {
+  display: flex;
+  align-items: center;
+  margin-left: 0.65rem;
+}
+
+.theme-picker-btn {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.38rem 0.72rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-picker-btn:hover,
+.theme-picker-btn:focus {
+  background: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.72);
+  outline: none;
+}
+
 .masthead {
   position: relative;
   width: 100%;
@@ -368,6 +397,14 @@ a:hover {
   object-fit: contain;
 }
 
+.sponsor-card-slcc {
+  min-height: 132px;
+}
+
+.sponsor-logo-slcc {
+  max-height: 94px;
+}
+
 .media-grid {
   display: grid;
   gap: 1rem;
@@ -497,6 +534,59 @@ a:hover {
 footer {
   padding: 2.4rem 0;
   color: #667085;
+}
+
+body[data-theme='dark'] {
+  color: #eef2fb;
+  background: radial-gradient(circle at 14% 18%, #1a2233 0%, #121a27 44%, #0b1018 100%);
+}
+
+body[data-theme='dark']::before {
+  background-image: linear-gradient(rgba(159, 172, 192, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(159, 172, 192, 0.08) 1px, transparent 1px);
+}
+
+body[data-theme='dark'] p,
+body[data-theme='dark'] .video-card .video-meta,
+body[data-theme='dark'] footer {
+  color: #c9d3e4;
+}
+
+body[data-theme='dark'] #navbar {
+  background: linear-gradient(180deg, rgba(5, 9, 14, 0.84), rgba(5, 9, 14, 0.62));
+  border-bottom-color: rgba(255, 255, 255, 0.16);
+}
+
+body[data-theme='dark'] #navbar.navbar-solid {
+  background: rgba(5, 9, 14, 0.96);
+}
+
+body[data-theme='dark'] .section-panel,
+body[data-theme='dark'] .sponsor-tier,
+body[data-theme='dark'] .empty-note {
+  background: rgba(13, 20, 31, 0.9);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+body[data-theme='dark'] .sponsor-card,
+body[data-theme='dark'] .media-card,
+body[data-theme='dark'] .video-card {
+  background: linear-gradient(150deg, #151e2b 0%, #101722 100%);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+body[data-theme='dark'] .media-card,
+body[data-theme='dark'] .video-card {
+  box-shadow: 0 14px 36px rgba(2, 8, 20, 0.45);
+}
+
+body[data-theme='dark'] .theme-picker-btn {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 991px) {
+  .theme-picker-item {
+    margin: 0.5rem 0 0;
+  }
 }
 
 .reveal-on-scroll {

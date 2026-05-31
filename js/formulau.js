@@ -8,6 +8,7 @@
   var VIDEO_FILES = content.videos || [];
   var lightboxFiles = [];
   var lightboxIndex = -1;
+  var THEME_KEY = 'formulauTheme';
 
   function createElement(tag, className, html) {
     var el = document.createElement(tag);
@@ -88,6 +89,12 @@
     img.src = file.download_url || file.path;
     img.alt = toTitle(file.name) + ' logo';
     img.loading = 'lazy';
+
+    if (/slcc\.edu/i.test(file.name)) {
+      card.classList.add('sponsor-card-slcc');
+      img.classList.add('sponsor-logo-slcc');
+    }
+
     card.appendChild(img);
 
     if (sponsorLink) {
@@ -373,6 +380,40 @@
     updateNavbarState();
   }
 
+  function setTheme(theme) {
+    var selectedTheme = theme === 'dark' ? 'dark' : 'light';
+    var picker = document.getElementById('themePicker');
+    var label = document.getElementById('themePickerLabel');
+    var icon = picker ? picker.querySelector('i') : null;
+
+    document.body.setAttribute('data-theme', selectedTheme);
+    localStorage.setItem(THEME_KEY, selectedTheme);
+
+    if (label) {
+      label.textContent = selectedTheme === 'dark' ? 'Light' : 'Dark';
+    }
+
+    if (icon) {
+      icon.className = selectedTheme === 'dark' ? 'fa fa-sun-o' : 'fa fa-moon-o';
+    }
+  }
+
+  function initializeThemePicker() {
+    var picker = document.getElementById('themePicker');
+    if (!picker) {
+      return;
+    }
+
+    var savedTheme = localStorage.getItem(THEME_KEY);
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
+
+    picker.addEventListener('click', function() {
+      var currentTheme = document.body.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+  }
+
   function initializeDynamicContent() {
     loadSponsors();
     loadPhotos();
@@ -380,6 +421,7 @@
   }
 
   initializeSmoothScroll();
+  initializeThemePicker();
   initializeNavbarSolidSwitch();
   initializeScrollReveal();
   initializeMediaLightbox();
