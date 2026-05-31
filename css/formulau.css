@@ -438,10 +438,22 @@ a:hover {
   object-fit: cover;
 }
 
+#mediaLightbox .modal-dialog {
+  max-width: min(96vw, 1240px);
+  margin: 0.5rem auto;
+}
+
+#mediaLightbox.modal .modal-dialog {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 1rem);
+}
+
 .lightbox-content {
   background: rgba(10, 14, 20, 0.94);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
+  width: 100%;
 }
 
 .lightbox-close {
@@ -456,14 +468,18 @@ a:hover {
 
 .lightbox-body {
   position: relative;
-  padding: 2.2rem 0.9rem 1rem;
+  padding: 2.3rem 1rem 1rem;
+  min-height: min(84vh, 920px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #lightboxImage {
   display: block;
   width: auto;
   max-width: 100%;
-  max-height: 80vh;
+  max-height: 82vh;
   margin: 0 auto;
   border-radius: 10px;
 }
@@ -620,5 +636,32 @@ body[data-theme='dark'] .theme-picker-btn {
 
   .media-card img {
     height: 178px;
+  }
+
+  #mediaLightbox .modal-dialog {
+    max-width: calc(100vw - 0.55rem);
+    margin: 0.25rem auto;
+  }
+
+  #mediaLightbox.modal .modal-dialog {
+    min-height: calc(100% - 0.5rem);
+  }
+
+  .lightbox-body {
+    min-height: calc(100vh - 2.1rem);
+    padding: 2rem 0.55rem 0.6rem;
+  }
+
+  .lightbox-nav {
+    width: 38px;
+    height: 38px;
+  }
+
+  .lightbox-prev {
+    left: 0.3rem;
+  }
+
+  .lightbox-next {
+    right: 0.3rem;
   }
 }
