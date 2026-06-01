@@ -147,8 +147,6 @@
     if (!container.children.length) {
       setEmpty(container, 'Sponsors will be announced soon.');
     }
-
-    setCount('statSponsorCount', currentCount);
   }
 
   function loadPhotos() {
@@ -194,8 +192,6 @@
     if (!files.length) {
       setEmpty(container, 'Gallery updates are coming soon.');
     }
-
-    setCount('statPhotoCount', files.length);
   }
 
   function updateLightboxImage() {
@@ -304,8 +300,6 @@
     if (!files.length) {
       setEmpty(container, 'Video highlights are coming soon.');
     }
-
-    setCount('statVideoCount', files.length);
   }
 
   function initializeScrollReveal() {

@@ -583,7 +583,11 @@ body[data-theme='dark'] .empty-note {
   border-color: rgba(255, 255, 255, 0.12);
 }
 
-body[data-theme='dark'] .sponsor-card,
+body[data-theme='dark'] .sponsor-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
 body[data-theme='dark'] .media-card,
 body[data-theme='dark'] .video-card {
   background: linear-gradient(150deg, #151e2b 0%, #101722 100%);
